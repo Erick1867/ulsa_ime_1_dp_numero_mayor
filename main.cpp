@@ -1,24 +1,44 @@
 // Práctica 5: El mayor de tres números
 // Traduce TU receta de RECETA.md a C++, paso por paso.
-// Deja el comentario "// Paso N" sobre cada bloque, con la numeración de TU receta.
 
-// ¿Recuerdas qué hace iostream?
 #include <iostream>
-
-// ¿Qué función de utilerias.h vas a usar? ¿Por qué esa y no la otra?
 #include "utilerias.h"
 
 int main() {
     // Variables (siempre inicializadas)
-    // TODO: ¿cuántas necesitas? ¿De qué tipo? ¿Necesitas alguna además de los tres números?
+    double numero1 = 0.0;
+    double numero2 = 0.0;
+    double numero3 = 0.0;
+    double mayor = 0.0;
 
     // Paso 1: mensaje de bienvenida
-    // TODO
+    std::cout << "Bienvenido a mi programa" << std::endl;
 
-    // TODO: el resto de tu receta, paso por paso.
-    //       ¿Tu decisión necesita una cadena if / else if / else o varios if independientes?
-    //       ¿Qué pasa con tu código si dos números son iguales?
+    // Paso 2: leer el primer número
+    numero1 = leerDecimal("Ingresa el primer numero: ");
 
-    // ¿Qué significa return 0;?
+    // Paso 3: leer el segundo número
+    numero2 = leerDecimal("Ingresa el segundo numero: ");
+
+    // Paso 4: leer el tercer número
+    numero3 = leerDecimal("Ingresa el tercer numero: ");
+
+    // Paso 5: guardar numero1 como el mayor
+    mayor = numero1;
+
+    // Paso 6: comparar numero2 con el mayor
+    if (numero2 > mayor) {
+    mayor = numero2;
+}
+
+    // Paso 7: comparar numero3 con el mayor
+    if (numero3 > mayor) {
+        mayor = numero3;
+    }
+
+    // Paso 8: mostrar el resultado
+    std::cout << "El numero mayor es: " << mayor << std::endl;
+
+    // Paso 9: terminar
     return 0;
 }
